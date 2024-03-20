@@ -1,0 +1,12 @@
+message set definition
+{
+	include dz1_asn1_support;
+	include ConformanceTestAgentDef;
+	typedef struct ConformanceTestAgentArg
+	{
+		Dz1Asn1UTF8Str		*ws_server;
+
+		ConformanceTestAgentException exceptionProc;
+		void *exceptionArg;
+	} ConformanceTestAgentArg;
+}

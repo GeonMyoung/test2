@@ -1,0 +1,8 @@
+message set definition
+{
+	include ConformanceTestAgentDef;
+	typedef struct ConformanceTestAgentMsgDefault
+	{
+		uint32 *dummy;
+	} ConformanceTestAgentMsgDefault;					// with api dump
+}

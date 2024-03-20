@@ -1,0 +1,8 @@
+message set definition
+{
+	include ConformanceTestAgentDef;
+	typedef struct ConformanceTestAgentTimer
+	{
+		uint32 id; // is key
+	} ConformanceTestAgentTimer; // with api dump, compare
+}

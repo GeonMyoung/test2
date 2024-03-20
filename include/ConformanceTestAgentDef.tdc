@@ -1,0 +1,11 @@
+message set definition
+{
+	include libdz1_support;
+	typedef func void ConformanceTestAgentException(void *exceptionArg, Dz1Error *reason);
+	-- ConformanceTestAgentDef structure declared for Linker warning
+	typedef struct ConformanceTestAgentDef
+	{
+		int32		dummy;
+	} ConformanceTestAgentDef;
+	-- if you declare other structure on this file, then delete ConformanceTestAgentDef structure
+}

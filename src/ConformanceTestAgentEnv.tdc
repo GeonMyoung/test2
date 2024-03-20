@@ -1,0 +1,32 @@
+message set definition
+{
+	include Dz1JsonDef;
+	include dz1_web_socket_def;
+	
+	include ConformanceTestAgentMsgDef;
+	include ConformanceTestAgentDef;
+	
+
+	typedef enum TestIdx
+	{
+		unknown,
+		TrafficLightChk,
+		Iso14827-2,
+		TechnicalRegulation1,
+		TechnicalRegulation2
+	} TestIdx;			
+
+	typedef func bool ScenarioHandler(void *exceptionArg, Dz1Error *errp);
+
+	typedef struct ConformanceTestAgentEnv
+	{
+		void				*tSelf;									-- Main Task Handle
+		void				*tScenario;								-- Test Scenario Task Handle
+		TestIdx				testIdx;								-- Selected Test Idx
+		Dz1JsonSpec			*spec;									
+		Dz1WebSocket		*wsock;
+		uint32				seq;
+		Dz1WebSockMsgList	*ws_msgs;	// is notarg
+		ScenarioHandler		scenarioHandler;
+	} ConformanceTestAgentEnv;				// with api dump
+}

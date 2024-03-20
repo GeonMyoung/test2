@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\dimz\dz1\project\vs2022\dz1.vcxproj">
+      <Project>{78EDEE71-C212-4C81-9AFF-02F055137471}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\dimz\dz1_tools\dz1_json\project\vs2022\dz1_json.vcxproj">
+      <Project>{0B4A6ABE-24DD-42BE-B6F8-1E7331896B0B}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\dimz\dz1_tools\dz1_sock_util\project\vs2022\dz1_sock_util.vcxproj">
+      <Project>{037962C4-CC05-4373-98D3-17770D8C0F37}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\dimz\dz1_tools\dz1_socket_ssl\project\vs2022\dz1_socket_ssl.vcxproj">
+      <Project>{28BA6900-214E-4A6E-B56D-3FA2E5BDD223}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\dimz\dz1_tools\dz1_web_socket\project\vs2022\dz1_web_socket.vcxproj">
+      <Project>{2AE89C61-ACDE-484E-99F8-72EB64C8DB1A}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ConformanceTestAgentMsg\project\vs2022\ConformanceTestAgentMsg.vcxproj">
+      <Project>{d58b5f54-e90b-482d-9129-c242d3df0f3f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TrafficLightChk\project\vs2022\TrafficLightChk.vcxproj">
+      <Project>{da300d64-368e-4a0c-9a2b-74af06c3f54d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TrafficLightMsg\project\vs2022\TrafficLightMsg.vcxproj">
+      <Project>{6613494d-24fd-4367-8b58-036e4a97bbdb}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{6BAF7362-3B06-4C71-A047-32D42DD6B6DC}</ProjectGuid>
+    <RootNamespace>ConformanceTestAgent</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Configuration)$(PlatformArchitecture)\</OutDir>
+    <IntDir>$(Configuration)$(PlatformArchitecture)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Configuration)$(PlatformArchitecture)\</OutDir>
+    <IntDir>$(Configuration)$(PlatformArchitecture)\</IntDir>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_LIB;__CLEANUP_C;__WORDSIZE=32;__SYSTEM_ENDIAN_LITTLE__;_DEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include;..\..\..\pthreads.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_LIB;__CLEANUP_C;__WORDSIZE=64;__SYSTEM_ENDIAN_LITTLE__;_DEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightChk\include;..\..\..\TrafficLightMsg\include;..\..\..\ConformanceTestAgentMsg\include;..\..\..\codeconv\include;..\..\..\pthreads.2;$(OPEN_SSL_SDK_ROOT)\$(Platform)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_LIB;__CLEANUP_C;__WORDSIZE=32;__SYSTEM_ENDIAN_LITTLE__;NDEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include;..\..\..\pthreads.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_LIB;__CLEANUP_C;__WORDSIZE=64;__SYSTEM_ENDIAN_LITTLE__;NDEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightChk\include;..\..\..\TrafficLightMsg\include;..\..\..\ConformanceTestAgentMsg\include;..\..\..\codeconv\include;..\..\..\pthreads.2;$(OPEN_SSL_SDK_ROOT)\$(Platform)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ConformanceTestAgent.c" />
+    <ClCompile Include="..\..\src\ConformanceTestAgentDef.c" />
+    <ClCompile Include="..\..\src\ConformanceTestAgentArg.c" />
+    <ClCompile Include="..\..\src\ConformanceTestAgentEnv.c" />
+    <ClCompile Include="..\..\src\ConformanceTestAgentEnvUtil.c" />
+    <ClCompile Include="..\..\src\ConformanceTestAgentMsgWebSock.c" />
+    <ClCompile Include="..\..\src\ConformanceTestAgentTimer.c" />
+    <ClCompile Include="..\..\src\ConformanceTestAgentTimerUtil.c" />
+    <ClCompile Include="..\..\src\ConformanceTestAgentMsgs.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\ConformanceTestAgent.h" />
+    <ClInclude Include="..\..\include\ConformanceTestAgentDef.h" />
+    <ClInclude Include="..\..\src\ConformanceTestAgentArg.h" />
+    <ClInclude Include="..\..\src\ConformanceTestAgentEnv.h" />
+    <ClInclude Include="..\..\src\ConformanceTestAgentEnvUtil.h" />
+    <ClInclude Include="..\..\src\ConformanceTestAgentTimer.h" />
+    <ClInclude Include="..\..\src\ConformanceTestAgentTimerUtil.h" />
+    <ClInclude Include="..\..\src\ConformanceTestAgentMsg.h" />
+    <ClInclude Include="..\..\src\ConformanceTestAgentMsgs.h" />
+    <ClInclude Include="ConformanceTestAgent_TrafficLightChkHandler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\include\ConformanceTestAgentDef.tdc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include -s ..\..\src ..\..\include\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\include\%(Filename).h;..\..\src\%(Filename).c;..\..\include\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include -s ..\..\src ..\..\include\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\include\%(Filename).h;..\..\src\%(Filename).c;..\..\include\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include -s ..\..\src ..\..\include\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\include\%(Filename).h;..\..\src\%(Filename).c;..\..\include\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include -s ..\..\src ..\..\include\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\include\%(Filename).h;..\..\src\%(Filename).c;..\..\include\%(Filename).tdo</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ConformanceTestAgentArg.tdc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ConformanceTestAgentEnv.tdc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\ConformanceTestAgentMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\ConformanceTestAgentMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ConformanceTestAgentTimer.tdc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ConformanceTestAgentMsgs.tdc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\dimz\dz1_tools\tdc.exe -I ..\..\src;..\..\include;..\..\..\dimz\dz1\include;..\..\..\dimz\dz1_tools\dz1_json\include;..\..\..\dimz\dz1_tools\dz1_sock_util\include;..\..\..\dimz\dz1_tools\dz1_socket_ssl\include;..\..\..\dimz\dz1_tools\dz1_web_socket\include;..\..\..\TrafficLightMsg\include;..\..\..\dimz\dz1\include;..\..\..\codeconv\include ..\..\src\%(Filename).tdc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TDC Compile for %(Filename).tdc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\src\%(Filename).h;..\..\src\%(Filename).c;..\..\src\%(Filename).tdo</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
